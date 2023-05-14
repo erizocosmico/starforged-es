@@ -1,0 +1,63 @@
+:root {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.no-reset ul {
+    list-style: disc;
+    padding-left: 1rem;
+}
+
+.no-reset > * + * {
+    @apply mt-3;
+}
+
+.no-reset a {
+    @apply font-semibold text-slate-900 underline underline-offset-4 decoration-slate-200  hover:text-indigo-600
+    hover:decoration-indigo-400 transition-all;
+}
+
+.no-reset table {
+    @apply border divide-y w-full;
+}
+
+.no-reset table td,
+.no-reset table th {
+    @apply px-2 py-1;
+}
+
+.no-reset table th {
+    @apply py-2 text-left;
+}
+
+.no-reset table tbody {
+    @apply divide-y;
+}
+
+.no-reset table tbody tr {
+    @apply odd:bg-slate-100 odd:bg-opacity-50;
+}
+
+.no-reset table tr {
+    @apply divide-x;
+}
+
+.hex:before {
+    content: ' ';
+    width: 0;
+    height: 0;
+    border-bottom: 30px solid #6c6;
+    border-left: 52px solid transparent;
+    border-right: 52px solid transparent;
+    position: absolute;
+    top: -30px;
+}
